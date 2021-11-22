@@ -66,7 +66,7 @@ public class BaseTest {
 	  	
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		 driver.get("https://demo.nopcommerce.com/");
+		 driver.get(GlobalConstants.PORTAL_PAGE_URL);
 		return driver;
 	}
 	

@@ -3,9 +3,9 @@ package com.nopcommerce.user;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopCommerce.portal.UserHomePageObject;
+import pageObjects.nopCommerce.portal.UserLoginPageObject;
+import pageObjects.nopCommerce.portal.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 
@@ -23,9 +23,9 @@ public class Level_06_Page_Generator_Manager_I {
 	//declare (khai bao)
 	private String lastName, firstName, invalidEmail, notFoundEmail, existingEmail, password;
 	private String projectPath = System.getProperty("user.dir");
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
 	
  @BeforeClass
   public void beforeClass() {
@@ -34,7 +34,7 @@ public class Level_06_Page_Generator_Manager_I {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get("https://demo.nopcommerce.com/");
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		
 		firstName ="Automation";
 		lastName = "FC";
@@ -46,7 +46,7 @@ public class Level_06_Page_Generator_Manager_I {
 		System.out.println("Pre-Condition - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 		//Click register link > nhảy qua trang register
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		  
 		System.out.println("Pre-Condition - Step 02: input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -62,7 +62,7 @@ public class Level_06_Page_Generator_Manager_I {
 
 		System.out.println("Pre-Condition - Step 05: click to logout link");
 		registerPage.clickToLogoutLink();
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		}
  
  @Test
@@ -70,7 +70,7 @@ public class Level_06_Page_Generator_Manager_I {
 	 System.out.println("Logic_01 - Step 01: Click to Login link");
 	 homePage.clickToLoginLink();
 	 // click vào login link > nhảy qua trang login > khởi tạo login page lên
-	 loginPage = new LoginPageObject(driver);
+	 loginPage = new UserLoginPageObject(driver);
 	 System.out.println("Logic_01 - Step 02: Click to Login button");
 	 loginPage.clickToLoginButton();
 	 System.out.println("Logic_01 - Step 03: verify error message empty data");
@@ -82,7 +82,7 @@ public class Level_06_Page_Generator_Manager_I {
 	 System.out.println("Logic_02 - Step 01: Click to Login link");
 	 homePage.clickToLoginLink();
 	 // click vào login link > nhảy qua trang login > khởi tạo login page lên
-	 loginPage = new LoginPageObject(driver);
+	 loginPage = new UserLoginPageObject(driver);
 	 System.out.println("Logic_02 - Step 02: enter an invalid email into email field");
 	 loginPage.inputToEmailTextbox(invalidEmail);
 	 System.out.println("Logic_02 - Step 03: Click to Login button");
@@ -96,7 +96,7 @@ public class Level_06_Page_Generator_Manager_I {
 	 System.out.println("Logic_03 - Step 01: Click to Login link");
 	 homePage.clickToLoginLink();
 	 // click vào login link > nhảy qua trang login > khởi tạo login page lên
-	 loginPage = new LoginPageObject(driver);
+	 loginPage = new UserLoginPageObject(driver);
 	 System.out.println("Logic_03 - Step 02: enter an email is not existing into email field");
 	 loginPage.inputToEmailTextbox(notFoundEmail);
 	 System.out.println("Logic_03 - Step 03: Click to Login button");
@@ -110,7 +110,7 @@ public class Level_06_Page_Generator_Manager_I {
 	 System.out.println("Logic_04 - Step 01: Click to Login link");
 	 homePage.clickToLoginLink(); 
 	 // click vào login link > nhảy qua trang login > khởi tạo login page lên
-	 loginPage = new LoginPageObject(driver);
+	 loginPage = new UserLoginPageObject(driver);
 	 System.out.println("Logic_04 - Step 02: enter an existing email without password");
 	 loginPage.inputToEmailTextbox(existingEmail);
 	 loginPage.inputToPasswordTextbox("");
@@ -126,7 +126,7 @@ public class Level_06_Page_Generator_Manager_I {
 	 homePage.clickToLoginLink();
 	 
 	 // click vào login link > nhảy qua trang login > khởi tạo login page lên
-	 loginPage = new LoginPageObject(driver);
+	 loginPage = new UserLoginPageObject(driver);
 	 System.out.println("Logic_05 - Step 02: enter an existing email with a wrong password");
 	 loginPage.inputToEmailTextbox(existingEmail);
 	 loginPage.inputToPasswordTextbox("123");
@@ -141,14 +141,14 @@ public class Level_06_Page_Generator_Manager_I {
 	 System.out.println("Logic_06 - Step 01: Click to Login link");
 	 homePage.clickToLoginLink();
 	 // click vào login link > nhảy qua trang login > khởi tạo login page lên
-	 loginPage = new LoginPageObject(driver);
+	 loginPage = new UserLoginPageObject(driver);
 	 System.out.println("Logic_06 - Step 02: enter an existing email and password");
 	 loginPage.inputToEmailTextbox(existingEmail);
 	 loginPage.inputToPasswordTextbox(password);
 	 System.out.println("Logic_06 - Step 03: Click to Login button");
      loginPage.clickToLoginButton();
      System.out.println("Logic_06 - Step 04: verify login successful by my account link is displayed at home page");
-	 homePage = new HomePageObject(driver);
+	 homePage = new UserHomePageObject(driver);
 	 Assert.assertTrue(homePage.isMyAccountLinkedDisplayed());
  }
 

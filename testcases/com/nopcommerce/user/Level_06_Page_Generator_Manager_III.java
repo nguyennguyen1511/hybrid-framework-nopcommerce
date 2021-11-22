@@ -4,11 +4,11 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.CustomerInfoPageObject;
-import pageObjects.PageGeneratorManager;
-import pageObjects.RegisterPageObject;
+import commons.PageGeneratorManager;
+import pageObjects.nopCommerce.portal.UserCustomerInfoPageObject;
+import pageObjects.nopCommerce.portal.UserHomePageObject;
+import pageObjects.nopCommerce.portal.UserLoginPageObject;
+import pageObjects.nopCommerce.portal.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -27,10 +27,10 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 	//declare (khai bao)
 	private String lastName, firstName, invalidEmail, notFoundEmail, existingEmail, password;
 	private String projectPath = System.getProperty("user.dir");
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInfoPageObject myAccountPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
+	private UserCustomerInfoPageObject myAccountPage;
 	
 	@Parameters("browser")	
 	@BeforeClass
@@ -38,7 +38,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		System.setProperty("webdriver.gecko.driver", projectPath +"/browser/geckodriver.exe");
 		driver = getBrowserDriver(browserName);
 		
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 		
 		firstName ="Automation";
 		lastName = "FC";
@@ -50,7 +50,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		System.out.println("Pre-Condition - Step 01: Click to Register link");
 		homePage.clickToRegisterLink();
 		//Click register link > nhảy qua trang register
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		  
 		System.out.println("Pre-Condition - Step 02: input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
