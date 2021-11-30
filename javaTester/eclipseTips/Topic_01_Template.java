@@ -10,21 +10,5 @@ public class Topic_01_Template {
 	
 	
 	public static void main (String[] arg) {
-		Assert.assertEquals("","");
-		Assert.assertTrue(true);
-		Assert.assertFalse(false);
-		
-		
-		
 	}
-	public Object executeForBrowserElement(WebDriver driver, String javaSript) {
-		try {
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			return js.executeScript(javaSript);
-		} catch (Exception e) {
-			e.getMessage();
-			return null;
-		}
-	}
-
 }

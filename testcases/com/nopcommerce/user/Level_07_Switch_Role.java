@@ -41,7 +41,7 @@ public class Level_07_Switch_Role extends BaseTest {
 	@Parameters("browser")	
 	@BeforeClass
   public void beforeClass(String browserName) {
-		System.setProperty("webdriver.gecko.driver", projectPath +"/browser/geckodriver.exe");
+//		System.setProperty("webdriver.gecko.driver", projectPath +"/browser/geckodriver.exe");
 		driver = getBrowserDriver(browserName);
 		
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
