@@ -1,6 +1,6 @@
 package javaBasic;
 
-public class Topic14_StringFormat {
+public class Topic_14_StringFormat {
 	
 	public static String CUSTOMER_INFO_LINK ="//div[contains(@class,'account-navigation')]//a[text()='Customer info']";
 	public static String ADDRESS_LINK ="//div[contains(@class,'account-navigation')]//a[text()='Addresses']";

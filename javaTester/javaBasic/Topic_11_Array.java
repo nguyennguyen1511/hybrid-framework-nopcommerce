@@ -2,7 +2,7 @@ package javaBasic;
 
 import org.testng.annotations.Test;
 
-public class Topic11_Array {
+public class Topic_11_Array {
 	int number[] = {5,8,12,60,70};
 	
 	@Test

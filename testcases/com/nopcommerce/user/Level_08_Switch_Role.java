@@ -28,7 +28,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Level_07_Switch_Role extends BaseTest {
+public class Level_08_Switch_Role extends BaseTest {
 	private WebDriver driver;
 	//declare (khai bao)
 	private String  userEmailAddress, userPassword, adminEmailAddress, adminPassword;
