@@ -41,7 +41,7 @@ public class Level_09_Dynamic_Locator extends BaseTest {
 	@Parameters("browser")	
 	@BeforeClass
   public void beforeClass(String browserName) {
-		System.setProperty("webdriver.gecko.driver", projectPath +"/browser/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", projectPath +"/browser/geckodriver");
 		driver = getBrowserDriver(browserName);
 		
 		homePage = PageGeneratorManager.getUserHomePage(driver);

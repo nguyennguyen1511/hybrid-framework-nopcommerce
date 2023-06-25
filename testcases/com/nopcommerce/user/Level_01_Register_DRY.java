@@ -19,7 +19,7 @@ public class Level_01_Register_DRY {
 	
  @BeforeClass
   public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath +"/browser/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", projectPath +"/browser/geckodriver");
 		driver = new FirefoxDriver();
 		emailAddress = "afc" + generateFakeNumber() + "@mail.vn";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
