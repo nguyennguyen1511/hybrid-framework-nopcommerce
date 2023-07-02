@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -138,7 +139,7 @@ public class BasePage {
 		return by;
 	}
 	
-	private String getDynamicXpath(String locatorType, String...values) {
+	public String getDynamicXpath(String locatorType, String...values) {
 		if (locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || 
 				locatorType.startsWith("XPATH=") || locatorType.startsWith("XPath=")) {
 			locatorType = String.format(locatorType, (Object[]) values);
@@ -146,11 +147,11 @@ public class BasePage {
 	return locatorType;
 	}
 
-	private WebElement getWebElement (WebDriver driver, String locatorType) {
+	public WebElement getWebElement (WebDriver driver, String locatorType) {
 		return driver.findElement(getByLocator(locatorType));
 	}
 	
-	private List<WebElement> getListWebElement (WebDriver driver, String locatorType) {
+	public List<WebElement> getListWebElement (WebDriver driver, String locatorType) {
 		return driver.findElements(getByLocator(locatorType));
 	}
 	
@@ -175,12 +176,12 @@ public class BasePage {
 	
 	public void selectItemInDefaultDropdow(WebDriver driver, String locatorType, String textItem) {
 		Select select = new Select(getWebElement(driver, locatorType));
-		select.selectByValue(textItem);
+		select.selectByVisibleText(textItem);
 		
 	}
 	public void selectItemInDefaultDropdow(WebDriver driver, String locatorType, String textItem, String...dynamicValues) {
 		Select select = new Select(getWebElement(driver, getDynamicXpath(locatorType,dynamicValues)));
-		select.selectByValue(textItem);
+		select.selectByVisibleText(textItem);
 		
 	}
 	
@@ -248,8 +249,14 @@ public class BasePage {
 		return getListWebElement(driver, getDynamicXpath(locatorType,dynamicValues)).size();
 	}
 	
-	public void checkToDefaultCheckboxRadio (WebDriver driver, String locatorType) {
+	public void checkToDefaultCheckboxOrRadio (WebDriver driver, String locatorType) {
 		WebElement element = getWebElement(driver, locatorType);
+		if(!element.isSelected()) {
+			element.click();
+		}
+	}
+	public void checkToDefaultCheckboxOrRadio (WebDriver driver, String locatorType, String...dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType,dynamicValues));
 		if(!element.isSelected()) {
 			element.click();
 		}
@@ -257,6 +264,12 @@ public class BasePage {
 	
 	public void uncheckToDefaultCheckbox (WebDriver driver, String locatorType) {
 		WebElement element = getWebElement(driver, locatorType);
+		if(element.isSelected()) {
+			element.click();
+		}
+	}
+	public void uncheckToDefaultCheckbox (WebDriver driver, String locatorType,String...dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType,dynamicValues));
 		if(element.isSelected()) {
 			element.click();
 		}
@@ -291,7 +304,14 @@ public class BasePage {
 		Actions action = new Actions (driver);
 		action.moveToElement(getWebElement(driver, locatorType)).perform();
 	}
-	
+	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key) {
+		Actions action = new Actions (driver);
+		action.sendKeys(getWebElement(driver, locatorType),key).perform();
+	}
+	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key,String...dynamicValues) {
+		Actions action = new Actions (driver);
+		action.sendKeys(getWebElement(driver, getDynamicXpath(locatorType,dynamicValues)),key).perform();
+	}
 	public void scrollToBottomPage(WebDriver driver) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("window.scrollBy(0,document.body.scrollHeight)");
@@ -410,7 +430,7 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 		
 	}
-	private long longTimeout = 30;
+	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 	
 	//toi uu o bai hoc switch page
 	

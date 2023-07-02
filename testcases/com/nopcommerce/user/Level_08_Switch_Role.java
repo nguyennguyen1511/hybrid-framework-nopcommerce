@@ -64,7 +64,7 @@ public class Level_08_Switch_Role extends BaseTest {
 	 
 	 userHomePage = userCustomerInfoPage.clickToLogOutLinkAtUserPage(driver);
 	 
-	 userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
+	 userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_STAGING_URL);
 	 adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 	 
 	 adminDashboardPage = adminLoginPage.loginAsAdmin(adminEmailAddress, adminPassword);
@@ -76,7 +76,7 @@ public class Level_08_Switch_Role extends BaseTest {
  @Test
  public void Role_02_Admin_To_User() {
 
-	 userHomePage.openPageUrl(driver, GlobalConstants.PORTAL_PAGE_URL);
+	 userHomePage.openPageUrl(driver, GlobalConstants.PORTAL_STAGING_URL);
 	 userHomePage = PageGeneratorManager.getUserHomePage(driver);
 	 userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
 	 Assert.assertTrue(userHomePage.isMyAccountLinkedDisplayed());
