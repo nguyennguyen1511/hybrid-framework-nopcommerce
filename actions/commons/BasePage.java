@@ -23,6 +23,7 @@ import pageObjects.nopCommerce.portal.UserHomePageObject;
 import pageObjects.nopCommerce.portal.UserLoginPageObject;
 import pageObjects.nopCommerce.portal.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.portal.UserRewardPointPageObject;
+import pageUIs.jQuery.UploadFile.BasePageJQueryUI;
 import pageUIs.nopCommerce.user.BasePageUI;
 import pageUIs.nopCommerce.user.CustomerInfoPageUI;
 import pageUIs.nopCommerce.user.RewardPointPageUI;
@@ -356,6 +357,11 @@ public class BasePage {
 		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, locatorType));
 		return status;
 	}
+	public boolean isImageLoaded(WebDriver driver, String locatorType, String...dynamicValues) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, getDynamicXpath(locatorType,dynamicValues)));
+		return status;
+	}
 	
 	public boolean areJQueryLoadedSuccess(WebDriver driver) {
 		WebDriverWait explicitWait = new WebDriverWait (driver, longTimeout); 
@@ -428,6 +434,20 @@ public class BasePage {
 	public void waitForElementclickAbled(WebDriver driver, String locatorType, String...dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait (driver, longTimeout); 
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
+		
+	}
+	
+	public void uploadMultipleFiles (WebDriver driver, String... fileNames) {
+		String filePath = GlobalConstants.UPLOAD_FILE;
+		
+		String fullFileName ="";
+		
+		for(String file: fileNames){
+			fullFileName = fullFileName + filePath + file +"\n";
+			
+		}
+		fullFileName = fullFileName.trim();
+		getWebElement(driver, BasePageJQueryUI.UPLOAD_FILE).sendKeys(fullFileName);
 		
 	}
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;

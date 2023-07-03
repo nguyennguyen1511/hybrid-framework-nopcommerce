@@ -1,4 +1,4 @@
-package payObjects.jQuery;
+package payObjects.jQuery.Table;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,9 +9,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import pageUIs.jQuery.HomePageUI;
-
 import commons.BasePage;
+import pageUIs.jQuery.Table.HomePageUI;
 
 public class HomePageObject extends BasePage{
 	WebDriver driver;

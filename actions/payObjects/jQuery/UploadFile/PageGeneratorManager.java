@@ -1,4 +1,4 @@
-package payObjects.jQuery;
+package payObjects.jQuery.UploadFile;
 
 import org.openqa.selenium.WebDriver;
 

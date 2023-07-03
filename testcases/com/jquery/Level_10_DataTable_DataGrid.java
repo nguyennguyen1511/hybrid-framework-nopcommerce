@@ -1,4 +1,4 @@
-package com.jquery.datatable;
+package com.jquery;
 
 
 import org.testng.annotations.Test;
@@ -12,8 +12,8 @@ import org.testng.annotations.AfterClass;
 
 import commons.BasePage;
 import commons.BaseTest;
-import payObjects.jQuery.PageGeneratorManager;
-import payObjects.jQuery.HomePageObject;
+import payObjects.jQuery.Table.HomePageObject;
+import payObjects.jQuery.Table.PageGeneratorManager;
 
 
 public class Level_10_DataTable_DataGrid extends BaseTest {

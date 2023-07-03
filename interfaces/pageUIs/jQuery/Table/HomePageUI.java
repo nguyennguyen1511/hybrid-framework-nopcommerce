@@ -1,4 +1,4 @@
-package pageUIs.jQuery;
+package pageUIs.jQuery.Table;
 
 public class HomePageUI {
 	//https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/
