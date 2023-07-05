@@ -1,7 +1,9 @@
 package commons;
 
+
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -277,10 +279,34 @@ public class BasePage {
 	}
 	
 	public boolean isElementDisplayed(WebDriver driver, String locatorType) {
-		return getWebElement(driver, locatorType).isDisplayed();	
+			return getWebElement(driver, locatorType).isDisplayed();
+	
 	}
 	public boolean isElementDisplayed(WebDriver driver, String locatorType,String...dynamicValues) {
 		return getWebElement(driver, getDynamicXpath(locatorType,dynamicValues)).isDisplayed();	
+	}
+	
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+		//System.out.println("Start timeout = "+ new Date() + toString());
+		
+		overrideGlobalTimeOut(driver,GlobalConstants.SHORT_TIMEOUT);
+		List <WebElement> elements = getListWebElement(driver, locator);
+		overrideGlobalTimeOut(driver,GlobalConstants.LONG_TIMEOUT);
+		
+		if (elements.size() == 0) {
+			System.out.println("Element ko co trong DOM");
+			return true;
+		}else if (elements.size() > 0 && !elements.get(0).isDisplayed()){
+			System.out.println("Element co trong DOM nhung undisplay");
+			return true;
+		}else {
+			return false;
+		}
+		
+
+	}
+	public void overrideGlobalTimeOut(WebDriver driver, long timeOut) {
+		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 	}
 	
 	public boolean isElementEnbled(WebDriver driver, String locatorType) {
@@ -406,6 +432,14 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait (driver, longTimeout); 
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByLocator(getDynamicXpath(locatorType, dynamicValues))));	
 	}
+	
+	public void waitForElementUndisplayed(WebDriver driver, String locatorType) {
+		WebDriverWait explicitWait = new WebDriverWait (driver, GlobalConstants.SHORT_TIMEOUT); 
+		overrideGlobalTimeOut(driver,GlobalConstants.SHORT_TIMEOUT);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locatorType)));	
+		overrideGlobalTimeOut(driver,GlobalConstants.LONG_TIMEOUT);
+	}
+	
 	
 	public void waitForAllElementVisible(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait (driver, longTimeout); 
