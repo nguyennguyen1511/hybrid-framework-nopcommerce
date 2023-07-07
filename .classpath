@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="javaTester"/>
-	<classpathentry kind="src" path="libraries"/>
+	<classpathentry kind="src" path="libSelenium"/>
 	<classpathentry kind="src" path="libWebDriverManager4"/>
 	<classpathentry kind="src" path="libWebDriverManager5"/>
 	<classpathentry kind="src" path="bin"/>
@@ -20,6 +20,13 @@
 	<classpathentry kind="lib" path="libraries/testng-6.14.3.jar"/>
 	<classpathentry kind="lib" path="libraries/client-combined-3.141.59-sources.jar"/>
 	<classpathentry kind="lib" path="libraries/testng-6.14.3-sources.jar"/>
+	<classpathentry kind="lib" path="libLog4J/commons-lang3-3.8.1.jar"/>
+	<classpathentry kind="lib" path="libLog4J/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="libLog4J/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="libSelenium/client-combined-3.141.59-sources.jar"/>
+	<classpathentry kind="lib" path="libSelenium/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="libSelenium/testng-6.14.3.jar"/>
+	<classpathentry kind="lib" path="libSelenium/testng-6.14.3-sources.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager5/bcpkix-jdk15on-1.64.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager5/bcprov-jdk15on-1.64.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager5/commons-codec-1.15.jar"/>
