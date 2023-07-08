@@ -20,6 +20,7 @@ public class GlobalConstants {
 	public static final String BROWSER_LOG = PROJECT_PATH + File.separator + "browserLogs";
 	public static final String DRAGDROP_HTML5 = PROJECT_PATH + File.separator + "dagDrophtml5";
 	public static final String REPORTING_SCREENSHOT = PROJECT_PATH + File.separator + "reportNGImages" + File.separator;
+	public static final String EXTENT_PATH = PROJECT_PATH + File.separator + "reportNGImages" + File.separator;
 	
 	public static final String DB_DEV_URL ="32.18.252.185:9865";
 	public static final String DB_DEV_USER ="AUTOMATION";

@@ -7,6 +7,7 @@ import org.testng.annotations.Parameters;
 
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
@@ -17,6 +18,8 @@ import payObjects.jQuery.Table.PageGeneratorManager;
 
 
 public class Level_10_DataTable_DataGrid extends BaseTest {
+	
+	private WebDriver driver;
 
 	HomePageObject homePage;
 	List<String> actualAllCountryValue;

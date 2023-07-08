@@ -1,0 +1,46 @@
+[2023-07-08 09:19:48,816] Register - Step 01: Navigate to 'Register' page
+[2023-07-08 09:19:50,180] Register - Step 02: enter to FirsName with value is 'Automation'
+[2023-07-08 09:19:50,351] Register - Step 03: enter to LastName with value is 'FC'
+[2023-07-08 09:19:50,463] Register - Step 04: enter to Email with value is 'afc102@mail.vn'
+[2023-07-08 09:19:50,623] Register - Step 05: enter to Password with value is '123456'
+[2023-07-08 09:19:50,730] Register - Step 06: enter to Confirm Pass with value is '123456'
+[2023-07-08 09:19:50,851] Register - Step 07: click on 'Register' Button
+[2023-07-08 09:19:51,653] Register - Step 08: verify message register success
+[2023-07-08 09:19:51,721]  -------------------------- PASSED -------------------------- 
+[2023-07-08 09:19:51,721] Register - Step 09: click on 'Logout' Button
+[2023-07-08 09:20:21,976] Login - Step 01: Navigate to 'Login' page
+[2023-07-08 09:20:23,313] Login - Step 02: enter to Email with value is 'afc102@mail.vn'
+[2023-07-08 09:20:23,461] Login - Step 03: enter to Password with value is '123456'
+[2023-07-08 09:20:23,607] Login - Step 04: click on 'Login' Button
+[2023-07-08 09:20:24,457] Login - Step 05: verify 'My Account' display
+[2023-07-08 09:20:24,595]  -------------------------- FAILED -------------------------- 
+[2023-07-08 09:20:24,595] Login - Step 06: click on 'My Account' link
+[2023-07-08 09:20:25,029] Login - Step 07: verify 'Customer Info' display
+[2023-07-08 09:20:25,127]  -------------------------- FAILED -------------------------- 
+[2023-07-08 11:35:53,210] Register - Step 01: Navigate to 'Register' page
+[2023-07-08 11:35:54,484] Register - Step 02: enter to FirsName with value is 'Automation'
+[2023-07-08 11:35:54,633] Register - Step 03: enter to LastName with value is 'FC'
+[2023-07-08 11:35:54,718] Register - Step 04: enter to Email with value is 'afc4296@mail.vn'
+[2023-07-08 11:35:54,832] Register - Step 05: enter to Password with value is '123456'
+[2023-07-08 11:35:54,929] Register - Step 06: enter to Confirm Pass with value is '123456'
+[2023-07-08 11:35:55,039] Register - Step 07: click on 'Register' Button
+[2023-07-08 11:35:56,287] Register - Step 08: verify message register success
+[2023-07-08 11:35:56,373] Login - Step 01: click on 'Logout' Button
+[2023-07-08 11:39:59,058] Register - Step 01: Navigate to 'Register' page
+[2023-07-08 11:40:00,455] Register - Step 02: enter to FirsName with value is 'Automation'
+[2023-07-08 11:40:00,605] Register - Step 03: enter to LastName with value is 'FC'
+[2023-07-08 11:40:00,690] Register - Step 04: enter to Email with value is 'afc1469@mail.vn'
+[2023-07-08 11:40:00,914] Register - Step 05: enter to Password with value is '123456'
+[2023-07-08 11:40:01,071] Register - Step 06: enter to Confirm Pass with value is '123456'
+[2023-07-08 11:40:01,165] Register - Step 07: click on 'Register' Button
+[2023-07-08 11:40:02,131] Register - Step 08: verify message register success
+[2023-07-08 11:40:02,218] Login - Step 01: click on 'Logout' Button
+[2023-07-08 11:44:02,705] Register - Step 01: Navigate to 'Register' page
+[2023-07-08 11:44:03,865] Register - Step 02: enter to FirsName with value is 'Automation'
+[2023-07-08 11:44:04,014] Register - Step 03: enter to LastName with value is 'FC'
+[2023-07-08 11:44:04,096] Register - Step 04: enter to Email with value is 'afc7309@mail.vn'
+[2023-07-08 11:44:04,231] Register - Step 05: enter to Password with value is '123456'
+[2023-07-08 11:44:04,335] Register - Step 06: enter to Confirm Pass with value is '123456'
+[2023-07-08 11:44:04,431] Register - Step 07: click on 'Register' Button
+[2023-07-08 11:44:05,168] Register - Step 08: verify message register success
+[2023-07-08 11:44:05,249] Login - Step 01: click on 'Logout' Button

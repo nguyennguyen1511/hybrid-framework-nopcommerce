@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="NopCommerce">
 
 <listeners>
-<listener class-name = "commons.MethodListener" ></listener >
+<listener class-name = "commons.MethodListener" /> 
+<listener class-name = "reportConfig.ExtentReportListener" /> 
+ <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+ <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
 </listeners>
 
-  <test name="Run on CHROME">
+  <test name="Run CHROME">
 	<parameter name="browser" value="chrome" />
     <classes>
-      <class name="com.nopcommerce.user.Level_10_Assert_Verify" />
+      <class name="com.nopcommerce.user.Level_15_ExtentV2_Screenshot" />
     </classes>
   </test> 
   

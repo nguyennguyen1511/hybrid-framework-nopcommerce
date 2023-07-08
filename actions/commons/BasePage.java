@@ -63,27 +63,27 @@ public class BasePage {
 		driver.navigate().refresh();
 	}
 	
-	public Alert waitForAlertPresence(WebDriver driver) {
-		WebDriverWait explicitwait = new WebDriverWait(driver, longTimeout);
-		return explicitwait.until(ExpectedConditions.alertIsPresent());
-		
-	}
 	
-	public void acceptAlert(WebDriver driver) {
-		waitForAlertPresence(driver).accept();
-	}
+	  public Alert waitForAlertPresence(WebDriver driver) { WebDriverWait
+	  explicitwait = new WebDriverWait(driver, longTimeout); return
+	  explicitwait.until(ExpectedConditions.alertIsPresent());
+	  
+	  }
+	 
 	
-	public void canceltAlert(WebDriver driver) {
-		waitForAlertPresence(driver).dismiss();
-	}
 	
-	public String getAlertText(WebDriver driver) {
-		return waitForAlertPresence(driver).getText();
-	}
-	
-	public void sendkeyToAlert(WebDriver driver, String textValue) {
-		waitForAlertPresence(driver).sendKeys(textValue);
-	}
+	  public void acceptAlert(WebDriver driver) {
+	  waitForAlertPresence(driver).accept(); }
+	  
+	  public void canceltAlert(WebDriver driver) {
+	  waitForAlertPresence(driver).dismiss(); }
+	  
+	  public String getAlertText(WebDriver driver) { return
+	  waitForAlertPresence(driver).getText(); }
+	  
+	  public void sendkeyToAlert(WebDriver driver, String textValue) {
+	  waitForAlertPresence(driver).sendKeys(textValue); }
+	 
 	
 	
 	public void switchToWindowsByID(WebDriver driver, String parentID) {
