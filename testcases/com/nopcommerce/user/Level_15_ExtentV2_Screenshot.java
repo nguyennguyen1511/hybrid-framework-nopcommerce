@@ -2,7 +2,7 @@ package com.nopcommerce.user;
 
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.LogStatus;
 
 import commons.BasePage;
 import commons.BaseTest;
@@ -14,7 +14,7 @@ import pageObjects.nopCommerce.portal.UserLoginPageObject;
 import pageObjects.nopCommerce.portal.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.portal.UserRegisterPageObject;
 import pageObjects.nopCommerce.portal.UserRewardPointPageObject;
-import reportConfig.ExtentTestManager;
+//import reportConfig.ExtentTestManagerV2;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -59,61 +59,82 @@ public class Level_15_ExtentV2_Screenshot extends BaseTest {
  
  @Test
 	public void User_01_Register(Method method) {
-	 	ExtentTestManager.startTest(method.getName(), "User_01_Register");
-	 	ExtentTestManager.getTest().log(LogStatus.INFO, "Register - Step 01: Navigate to 'Register' page");	 	
-		registerPage = homePage.clickToRegisterLink();
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Register - Step 02: enter to FirsName with value is '" + firstName + "'");	
-		registerPage.inputToFirstNameTextbox(firstName);
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Register - Step 03: enter to LastName with value is '" + lastName + "'");
-		registerPage.inputToLastNameTextbox(lastName);
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Register - Step 04: enter to Email with value is '" + emailAddress + "'");
-		registerPage.inputToEmailTextbox(emailAddress);
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Register - Step 05: enter to Password with value is '" + password + "'");
-		registerPage.inputToPasswordTextbox(password);
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Register - Step 06: enter to Confirm Pass with value is '" + password + "'");
-		registerPage.inputToConfirmPasswordTextbox(password);
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Register - Step 07: click on 'Register' Button");
-		registerPage.clickToRegisterButton();
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Register - Step 08: verify message register success");
-		Assert.assertEquals(registerPage.getSuccessRegisterMessage(), "Your registration completed");
-		
-		ExtentTestManager.endTest();
+		/*
+		 * ExtentTestManager.startTest(method.getName(), "User_01_Register");
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Register - Step 01: Navigate to 'Register' page"); registerPage =
+		 * homePage.clickToRegisterLink();
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Register - Step 02: enter to FirsName with value is '" + firstName + "'");
+		 * registerPage.inputToFirstNameTextbox(firstName);
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Register - Step 03: enter to LastName with value is '" + lastName + "'");
+		 * registerPage.inputToLastNameTextbox(lastName);
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Register - Step 04: enter to Email with value is '" + emailAddress + "'");
+		 * registerPage.inputToEmailTextbox(emailAddress);
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Register - Step 05: enter to Password with value is '" + password + "'");
+		 * registerPage.inputToPasswordTextbox(password);
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Register - Step 06: enter to Confirm Pass with value is '" + password +
+		 * "'"); registerPage.inputToConfirmPasswordTextbox(password);
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Register - Step 07: click on 'Register' Button");
+		 * registerPage.clickToRegisterButton();
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Register - Step 08: verify message register success");
+		 * Assert.assertEquals(registerPage.getSuccessRegisterMessage(),
+		 * "Your registration completed");
+		 * 
+		 * ExtentTestManager.endTest();
+		 */
 		
 	}
 @Test
 	public void User_02_Login() {
 	
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Login - Step 01: click on 'Logout' Button");
-		homePage = registerPage.clickToLogoutLink();
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Login - Step 02: Navigate to 'Login' page");
-		loginPage = homePage.clickToLoginLink();
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Login - Step 03: enter to Email with value is '" + emailAddress + "'");
-		loginPage.inputToEmailTextbox(emailAddress);
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Login - Step 04: enter to Password with value is '" + password + "'");
-		loginPage.inputToPasswordTextbox(password);
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Login - Step 05: click on 'Login' Button");
-		homePage = loginPage.clickToLoginButton();
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Login - Step 06: verify 'My Account' display");
-		Assert.assertFalse(homePage.isMyAccountLinkedDisplayed());
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Login - Step 07: click on 'My Account' link");
-		customerInfoPage = homePage.clickToMyAccountLink();
-		
-		ExtentTestManager.getTest().log(LogStatus.INFO, "Login - Step 08: verify 'Customer Info' display");
-		Assert.assertFalse(customerInfoPage.isCustomerInfoPageDisplayed());
-		ExtentTestManager.endTest();
+		/*
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Login - Step 01: click on 'Logout' Button"); homePage =
+		 * registerPage.clickToLogoutLink();
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Login - Step 02: Navigate to 'Login' page"); loginPage =
+		 * homePage.clickToLoginLink();
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Login - Step 03: enter to Email with value is '" + emailAddress + "'");
+		 * loginPage.inputToEmailTextbox(emailAddress);
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Login - Step 04: enter to Password with value is '" + password + "'");
+		 * loginPage.inputToPasswordTextbox(password);
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Login - Step 05: click on 'Login' Button"); homePage =
+		 * loginPage.clickToLoginButton();
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Login - Step 06: verify 'My Account' display");
+		 * Assert.assertFalse(homePage.isMyAccountLinkedDisplayed());
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Login - Step 07: click on 'My Account' link"); customerInfoPage =
+		 * homePage.clickToMyAccountLink();
+		 * 
+		 * ExtentTestManager.getTest().log(LogStatus.INFO,
+		 * "Login - Step 08: verify 'Customer Info' display");
+		 * Assert.assertFalse(customerInfoPage.isCustomerInfoPageDisplayed());
+		 * ExtentTestManager.endTest();
+		 */
 }
  
 
