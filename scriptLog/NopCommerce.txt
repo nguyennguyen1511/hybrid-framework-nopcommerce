@@ -1,0 +1,14 @@
+[2023-07-11 13:46:45,967] Register - Step 01: Navigate to 'Register' page
+[2023-07-11 13:46:47,145] Register - Select Gender
+[2023-07-11 13:46:47,473] Register - Step 02: enter to FirsName with value is 'Automation'
+[2023-07-11 13:46:47,572] Register - Step 03: enter to LastName with value is 'FC'
+[2023-07-11 13:46:47,654] Register - Enter Birthday
+[2023-07-11 13:46:48,467] Register - Step 04: enter to Email with value is 'afc6660@mail.vn'
+[2023-07-11 13:46:48,529] Register - click to checkbox
+[2023-07-11 13:46:48,566] Register - Step 05: enter to Password with value is '123456'
+[2023-07-11 13:46:48,624] Register - Step 06: enter to Confirm Pass with value is '123456'
+[2023-07-11 13:46:48,687] Register - Step 07: click on 'Register' Button
+[2023-07-11 13:46:50,020] Register - Step 08: verify message register success
+[2023-07-11 13:46:50,255] Login - Step 02: Navigate to 'Login' page
+[2023-07-11 13:47:20,312] OS name = mac os x
+[2023-07-11 13:47:20,314] Driver instance name = firefoxdriver: firefox on mac (75ea2321-ef27-4450-969c-7ad087881e1a)

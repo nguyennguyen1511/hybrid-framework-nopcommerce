@@ -188,12 +188,12 @@ public class BasePage {
 		element.sendKeys(valueText);
 	}
 	
-	public void selectItemInDefaultDropdow(WebDriver driver, String locatorType, String textItem) {
+	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem) {
 		Select select = new Select(getWebElement(driver, locatorType));
 		select.selectByVisibleText(textItem);
 		
 	}
-	public void selectItemInDefaultDropdow(WebDriver driver, String locatorType, String textItem, String...dynamicValues) {
+	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem, String...dynamicValues) {
 		Select select = new Select(getWebElement(driver, getDynamicXpath(locatorType,dynamicValues)));
 		select.selectByVisibleText(textItem);
 		
@@ -542,10 +542,54 @@ public class BasePage {
 			throw new RuntimeException("Invalid page name at My Account area.");
 		}
 	}
+	
+	//Pattern Object
 	public void openPagesAtMyAccountByPageName(WebDriver driver, String pageName) {
 		waitForElementclickAbled(driver, BasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
 		clickToElement(driver, BasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
 	}
+	
+	/** Enter to Textbox Dynamics by ID
+	 * @param driver
+	 * @param textboxId
+	 * @param value
+	 */
+	public void inputToTextboxByID(WebDriver driver, String textboxId, String value) {
+		waitForElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxId);
+		sendKeysToElement(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxId);
+		
+	}
+	
+	/** Click to Button Dynamics by Text
+	 * @param driver
+	 * @param textboxId
+	 * @param value
+	 */
+	public void clickToButtonByText(WebDriver driver, String buttonText) {
+		waitForElementclickAbled(driver,BasePageUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+		clickToElement(driver,BasePageUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);	
+	}
+	
+
+	public void clickToRadioButtonByLabel(WebDriver driver, String radioLabelName) {
+		waitForElementclickAbled(driver,BasePageUI.DYNAMIC_RADIO_BY_LABLE, radioLabelName);
+		checkToDefaultCheckboxOrRadio(driver,BasePageUI.DYNAMIC_RADIO_BY_LABLE, radioLabelName);	
+		
+	}
+
+	public void selectToDropdownByName(WebDriver driver, String dropdownAttributeName, String itemValue) {
+		waitForElementVisible(driver,BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttributeName);
+		selectItemInDefaultDropdown(driver,BasePageUI.DYNAMIC_DROPDOWN_BY_NAME,itemValue, dropdownAttributeName);
+		
+	}
+
+	public void clickToCheckboxByLabel(WebDriver driver, String checkboxLabelName) {
+		waitForElementclickAbled(driver,BasePageUI.DYNAMIC_CHECKBOX_BY_LABLE, checkboxLabelName);
+		checkToDefaultCheckboxOrRadio(driver,BasePageUI.DYNAMIC_CHECKBOX_BY_LABLE, checkboxLabelName);	
+		
+	}
+	
+	
 	//level_08_switch_role
 	public UserLoginPageObject openLoginPage(WebDriver driver) {
 		waitForElementclickAbled(driver, BasePageUI.LOGIN_LINK);

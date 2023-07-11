@@ -70,7 +70,7 @@ public class HomePageObject extends BasePage{
 		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME,columnName)+1;
 		
 		waitForElementclickAbled(driver,HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX,rowNumber,String.valueOf(columnIndex));
-		selectItemInDefaultDropdow(driver,HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, valueSelect,rowNumber,String.valueOf(columnIndex));
+		selectItemInDefaultDropdown(driver,HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, valueSelect,rowNumber,String.valueOf(columnIndex));
 		
 	}
 	public void clickLoadDataButton() {
