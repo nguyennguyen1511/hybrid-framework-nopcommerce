@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="JQuery">
 
-<parameter name="url" value="https://blueimp.github.io/jQuery-File-Upload/" />
+<parameter name="appUrl" value="https://www.saucedemo.com/" />
   
   <test name="Run on FIREFOX">
   <parameter name="browser" value="chrome" />
 
 	
     <classes>
-      <class name="com.jquery.Level_11_Upload_Files" />
+      <class name="com.sauceLabs.sort.Level_19_Sort_Asc_Desc" />
     </classes>
   </test> 
   

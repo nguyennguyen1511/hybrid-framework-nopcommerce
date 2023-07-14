@@ -13,8 +13,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
@@ -41,15 +43,35 @@ public class BaseTest {
 		
 	  	if (browserList == BrowserList.FIREFOX){
 	  		WebDriverManager.firefoxdriver().setup();
+	  		System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+	  		System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,  GlobalConstants.PROJECT_PATH + "/browserLogs/FirefoxLog.log");
+	  		//add extensions for firefox
+	  		FirefoxProfile profile = new FirefoxProfile();
+	  		File translate = new File (GlobalConstants.PROJECT_PATH + "/browserExtensions/to_google_translate-4.2.0.xpi");
+	  		profile.addExtension(translate);
+	  		FirefoxOptions options = new FirefoxOptions();
+	  		options.setProfile(profile);
 			driver = new FirefoxDriver();
-	  	}else if (browserList == BrowserList.H_FIREFOX){
+			
+	  	}else if(browserList == BrowserList.SAFARI) {
+	  		//WebDriverManager.safaridriver().setup();
+	  		driver = new SafariDriver();
+	  		
+		}else if (browserList == BrowserList.H_FIREFOX){
 	  		WebDriverManager.firefoxdriver().setup();
 	  		FirefoxOptions options = new FirefoxOptions();
 	  		options.addArguments("--headless");
 	  		options.addArguments("window-size=1920x1080");
 			driver = new FirefoxDriver(options);
+			
 	  	}else if (browserList == BrowserList.CHROME)  {
 		  		WebDriverManager.chromedriver().setup();
+		  		System.setProperty("webdriver.chrome.args", "--disable-logging");
+		  		System.setProperty("webdriver.chrome.silentOutput", "true");
+		  		//add extension to Chrome
+		  		File file = new File (GlobalConstants.PROJECT_PATH + "/browserExtensions/extension_2_0_13_0.crx");
+		  		ChromeOptions options = new ChromeOptions();
+		  		options.addExtensions(file);
 		  		driver = new ChromeDriver();
 		}else if (browserList == BrowserList.H_CHROME){
 	  		WebDriverManager.firefoxdriver().setup();
@@ -97,6 +119,8 @@ public class BaseTest {
 		if (browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+		}else if(browserName.equals("safari")) {
+			driver = new SafariDriver();
 		}else if (browserName.equals("h_firefox")){
 	  		WebDriverManager.firefoxdriver().setup();
 	  		FirefoxOptions options = new FirefoxOptions();
@@ -217,21 +241,15 @@ public class BaseTest {
 		return pass;
 	}
 	
-	public void deleteAllureReport() {
-		try {
-			String pathFolderDownload = GlobalConstants.PROJECT_PATH + "/allure-json";
-			File file = new File(pathFolderDownload);
-			File[] listOfFiles = file.listFiles();
-			for (int i = 0; i < listOfFiles.length; i++) {
-				if (listOfFiles[i].isFile()) {
-					System.out.println(listOfFiles[i].getName());
-					new File(listOfFiles[i].toString()).delete();
-				}
-			}
-		} catch (Exception e) {
-			System.out.print(e.getMessage());
-		}
-	}
+	
+	  public void deleteAllureReport() { try { String pathFolderDownload =
+	  GlobalConstants.PROJECT_PATH + "/allure-json"; File file = new
+	  File(pathFolderDownload); File[] listOfFiles = file.listFiles(); for (int i =
+	  0; i < listOfFiles.length; i++) { if (listOfFiles[i].isFile()) {
+	  System.out.println(listOfFiles[i].getName()); new
+	  File(listOfFiles[i].toString()).delete(); } } } catch (Exception e) {
+	  System.out.print(e.getMessage()); } }
+	 
 	
 	protected void closeBrowserDriver() {
 		String cmd = null;

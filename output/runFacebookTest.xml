@@ -5,10 +5,10 @@
 <listener class-name = "commons.MethodListener" ></listener >
 </listeners>
 
-<parameter name="url" value="https://facebook.com/" />
+<parameter name="url" value="https://demo.nopcommerce.com" />
   
-  <test name="Run on FIREFOX">
-  <parameter name="browser" value="firefox" />
+  <test name="Run on SAFARI">
+  <parameter name="browser" value="safari" />
 
 	
     <classes>

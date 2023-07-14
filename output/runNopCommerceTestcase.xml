@@ -11,9 +11,11 @@
  <listener class-name = "reportConfig.AllureTestListener" /> -->
 </listeners>
 
-<parameter name="url" value="DEV" />
-  <test name="Run FIREFOX">
-	<parameter name="browser" value="firefox" />
+<parameter name="url" value="https://demo.nopcommerce.com" />
+  
+  <test name="Run on SAFARI">
+  <parameter name="browser" value="safari" />
+
     <classes>
     	<!--<class name="com.nopcommerce.common.Common_01_Register_Cookie" /> -->
         <class name="com.nopcommerce.user.Level_18_Pattern_Object" />
