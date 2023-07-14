@@ -283,3 +283,115 @@ Session ID: 810c8e42-1de0-4658-ac3b-d6a1f40f9358
 [2023-07-13 12:36:30,539] Login - Step 08: verify 'Customer Info' display
 [2023-07-13 12:36:30,611] OS name = mac os x
 [2023-07-13 12:36:30,611] Driver instance name = safaridriver: safari on mac (d290fe4f-8c3a-497b-9599-f0c255671c05)
+[2023-07-14 09:32:05,255] Register - Step 01: Navigate to 'Register' page
+[2023-07-14 09:32:05,663] Register - Select Gender
+[2023-07-14 09:32:06,534] Register - Step 02: enter to FirsName with value is 'Marc'
+[2023-07-14 09:32:06,738] Register - Step 03: enter to LastName with value is 'McKenzie'
+[2023-07-14 09:32:06,892] Register - Enter Birthday
+[2023-07-14 09:32:07,154] Register - Step 04: enter to Email with value is 'flossie.langworth@gmail.com'
+[2023-07-14 09:32:07,619] Register - click to checkbox
+[2023-07-14 09:32:07,663] Register - Step 05: enter to Password with value is 'AiAaE0v6A'
+[2023-07-14 09:32:07,809] Register - Step 06: enter to Confirm Pass with value is 'AiAaE0v6A'
+[2023-07-14 09:32:07,931] Register - Step 07: click on 'Register' Button
+[2023-07-14 09:32:08,037] Register - Step 08: verify message register success
+[2023-07-14 09:32:09,533] Login - Step 02: Navigate to 'Login' page
+[2023-07-14 09:32:09,593] Login - Step 03: enter to Email with value is 'flossie.langworth@gmail.com'
+[2023-07-14 09:32:10,832] Login - Step 04: enter to Password with value is 'AiAaE0v6A'
+[2023-07-14 09:32:10,984] Login - Step 05: click on 'Login' Button
+[2023-07-14 09:32:11,082] Login - Step 06: verify 'My Account' display
+[2023-07-14 09:32:12,182] Login - Step 07: click on 'My Account' link
+[2023-07-14 09:32:12,255] Login - Step 08: verify 'Customer Info' display
+[2023-07-14 09:32:13,125] OS name = mac os x
+[2023-07-14 09:32:13,127] Driver instance name = safaridriver: safari on mac (97aad720-3033-41a6-af32-a8e51be35415)
+[2023-07-14 11:33:15,663] OS name = mac os x
+[2023-07-14 11:33:15,665] Driver instance name = safaridriver: safari on mac (2699a37b-a6e0-4d32-9bb1-6e88ee62ed85)
+[2023-07-14 11:33:51,086] OS name = mac os x
+[2023-07-14 11:33:51,089] Driver instance name = chromedriver: chrome on mac (c643209f9c94829262e54455887cbe3d)
+[2023-07-14 11:34:48,953] OS name = mac os x
+[2023-07-14 11:34:48,957] 
+[2023-07-14 11:40:58,151] OS name = mac os x
+[2023-07-14 11:40:58,164] Driver instance name = chromedriver: chrome on mac (7378a47d13a75d48751760dae039f071)
+[2023-07-14 11:42:58,228] OS name = mac os x
+[2023-07-14 11:42:58,230] Driver instance name = chromedriver: chrome on mac (c9f212e449869609bd700b6dee083d2b)
+[2023-07-14 11:44:09,448] Register - Step 01: Navigate to 'Register' page
+[2023-07-14 11:44:10,827] Register - Select Gender
+[2023-07-14 11:44:10,982] Register - Step 02: enter to FirsName with value is 'null'
+[2023-07-14 11:44:11,147] Login - Step 02: Navigate to 'Login' page
+[2023-07-14 11:44:11,612] Login - Step 03: enter to Email with value is 'automation1297@fakemail.com'
+[2023-07-14 11:44:11,905] Login - Step 04: enter to Password with value is 'automation'
+[2023-07-14 11:44:12,069] Login - Step 05: click on 'Login' Button
+[2023-07-14 11:44:12,567] Login - Step 06: verify 'My Account' display
+[2023-07-14 11:44:42,668] OS name = mac os x
+[2023-07-14 11:44:42,670] Driver instance name = chromedriver: chrome on mac (d33c3d521e1ce99a029330f38a902d2b)
+[2023-07-14 11:47:31,426] Register - Step 01: Navigate to 'Register' page
+[2023-07-14 11:47:32,559] Register - Select Gender
+[2023-07-14 11:47:32,724] Register - Step 02: enter to FirsName with value is 'null'
+[2023-07-14 11:47:32,881] Login - Step 02: Navigate to 'Login' page
+[2023-07-14 11:47:33,330] Login - Step 03: enter to Email with value is 'automation842@fakemail.com'
+[2023-07-14 11:47:33,561] Login - Step 04: enter to Password with value is 'automation'
+[2023-07-14 11:47:33,717] Login - Step 05: click on 'Login' Button
+[2023-07-14 11:47:34,188] Login - Step 06: verify 'My Account' display
+[2023-07-14 11:48:04,272] OS name = mac os x
+[2023-07-14 11:48:04,280] Driver instance name = chromedriver: chrome on mac (835a8a64448f495011df2de5aa2237fd)
+[2023-07-14 11:53:48,005] Register - Step 01: Navigate to 'Register' page
+[2023-07-14 11:53:49,030] Register - Select Gender
+[2023-07-14 11:53:49,174] Register - Step 02: enter to FirsName with value is 'automation'
+[2023-07-14 11:53:49,401] Register - Step 03: enter to LastName with value is 'fc'
+[2023-07-14 11:53:49,611] Register - Enter Birthday
+[2023-07-14 11:54:19,906] Login - Step 02: Navigate to 'Login' page
+[2023-07-14 11:54:20,901] Login - Step 03: enter to Email with value is 'automation9535@fakemail.com'
+[2023-07-14 11:54:21,142] Login - Step 04: enter to Password with value is 'automation'
+[2023-07-14 11:54:21,307] Login - Step 05: click on 'Login' Button
+[2023-07-14 11:54:21,789] Login - Step 06: verify 'My Account' display
+[2023-07-14 11:54:51,857] OS name = mac os x
+[2023-07-14 11:54:51,863] Driver instance name = chromedriver: chrome on mac (70750e3ef261d495b7fb0f58b76e15df)
+[2023-07-14 11:55:38,123] Register - Step 01: Navigate to 'Register' page
+[2023-07-14 11:55:39,232] Register - Select Gender
+[2023-07-14 11:55:39,381] Register - Step 02: enter to FirsName with value is 'automation'
+[2023-07-14 11:55:39,592] Register - Step 03: enter to LastName with value is 'fc'
+[2023-07-14 11:55:39,737] Register - Enter Birthday
+[2023-07-14 11:55:40,123] Register - Step 04: enter to Email with value is 'automation1397@fakemail.com'
+[2023-07-14 11:55:40,328] Register - click to checkbox
+[2023-07-14 11:55:40,389] Register - Step 05: enter to Password with value is 'automation'
+[2023-07-14 11:55:40,556] Login - Step 02: Navigate to 'Login' page
+[2023-07-14 11:55:41,068] Login - Step 03: enter to Email with value is 'automation1397@fakemail.com'
+[2023-07-14 11:55:41,241] Login - Step 04: enter to Password with value is 'automation'
+[2023-07-14 11:55:41,391] Login - Step 05: click on 'Login' Button
+[2023-07-14 11:55:42,197] Login - Step 06: verify 'My Account' display
+[2023-07-14 11:56:12,264] OS name = mac os x
+[2023-07-14 11:56:12,267] Driver instance name = chromedriver: chrome on mac (9d6b0218d5536cd5bec6ba5c5dd29b7f)
+[2023-07-14 11:58:13,757] Register - Step 01: Navigate to 'Register' page
+[2023-07-14 11:58:14,875] Register - Select Gender
+[2023-07-14 11:58:15,031] Register - Step 02: enter to FirsName with value is 'automation'
+[2023-07-14 11:58:15,244] Register - Step 03: enter to LastName with value is 'fc'
+[2023-07-14 11:58:15,409] Register - Enter Birthday
+[2023-07-14 11:58:15,785] Register - Step 04: enter to Email with value is 'automation7228@fakemail.com'
+[2023-07-14 11:58:15,978] Register - click to checkbox
+[2023-07-14 11:58:16,031] Register - Step 05: enter to Password with value is '123456'
+[2023-07-14 11:58:16,190] Login - Step 02: Navigate to 'Login' page
+[2023-07-14 11:58:16,729] Login - Step 03: enter to Email with value is 'automation7228@fakemail.com'
+[2023-07-14 11:58:16,903] Login - Step 04: enter to Password with value is '123456'
+[2023-07-14 11:58:17,045] Login - Step 05: click on 'Login' Button
+[2023-07-14 11:58:17,626] Login - Step 06: verify 'My Account' display
+[2023-07-14 11:58:47,688] OS name = mac os x
+[2023-07-14 11:58:47,690] Driver instance name = chromedriver: chrome on mac (33654440557f16a34c85220acdae196b)
+[2023-07-14 12:02:13,758] Register - Step 01: Navigate to 'Register' page
+[2023-07-14 12:02:15,365] Register - Select Gender
+[2023-07-14 12:02:15,825] Register - Step 02: enter to FirsName with value is 'automation'
+[2023-07-14 12:02:16,230] Register - Step 03: enter to LastName with value is 'fc'
+[2023-07-14 12:02:16,398] Register - Enter Birthday
+[2023-07-14 12:02:16,857] Register - Step 04: enter to Email with value is 'automation7298@fakemail.com'
+[2023-07-14 12:02:17,068] Register - click to checkbox
+[2023-07-14 12:02:17,124] Register - Step 05: enter to Password with value is '123456'
+[2023-07-14 12:02:17,322] Register - Step 06: enter to Confirm Pass with value is 'null'
+[2023-07-14 12:02:17,458] Register - Step 07: click on 'Register' Button
+[2023-07-14 12:02:18,752] Register - Step 08: verify message register success
+[2023-07-14 12:02:19,152] Login - Step 02: Navigate to 'Login' page
+[2023-07-14 12:02:19,694] Login - Step 03: enter to Email with value is 'automation7298@fakemail.com'
+[2023-07-14 12:02:19,877] Login - Step 04: enter to Password with value is '123456'
+[2023-07-14 12:02:20,024] Login - Step 05: click on 'Login' Button
+[2023-07-14 12:02:21,028] Login - Step 06: verify 'My Account' display
+[2023-07-14 12:02:21,216] Login - Step 07: click on 'My Account' link
+[2023-07-14 12:02:22,165] Login - Step 08: verify 'Customer Info' display
+[2023-07-14 12:02:22,235] OS name = mac os x
+[2023-07-14 12:02:22,235] Driver instance name = chromedriver: chrome on mac (dde8d53d4e1ae0197deb18ddf4cad206)
